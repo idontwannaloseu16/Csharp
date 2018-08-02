@@ -1,0 +1,9 @@
+
+         [DllImport("Powrprof.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+        public static extern bool SetSuspendState(bool hibernate, bool forceCritical, bool disableWakeEvent);
+
+         // stay awake     
+	SetSuspendState(false, false, false);
+        // Standby
+        SetSuspendState(false, true, true);
+
